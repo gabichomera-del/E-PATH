@@ -1,0 +1,3 @@
+-- Canonical E-P.A.T.H. schema
+-- Apply the versioned files in supabase/migrations in filename order.
+-- This file intentionally contains no duplicate table definitions.

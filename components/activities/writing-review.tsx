@@ -1,0 +1,8 @@
+import { CheckCircle2, SearchCheck } from "lucide-react";
+import type { WritingAnalysis, WritingIssueCategory } from "@/lib/learning/writing-evaluator";
+
+const labels: Record<WritingIssueCategory, string> = { spelling: "Spelling", grammar: "Grammar", agreement: "Grammar — subject/verb agreement", verb_form: "Grammar — verb form", word_order: "Word order", articles: "Articles", pronouns: "Pronouns", plural: "Singular/plural", prepositions: "Prepositions", vocabulary: "Vocabulary", capitalization: "Capitalization", punctuation: "Punctuation", structure: "Sentence structure", target_language: "Target language" };
+export function WritingReview({ analysis }: { analysis: WritingAnalysis }) {
+  if (analysis.canComplete) return <div className="mt-5 rounded-2xl bg-emerald-100 p-4 text-emerald-800"><p className="flex items-center gap-2 font-bold"><CheckCircle2 size={19}/> Great revision! Your writing is ready to complete.</p></div>;
+  return <div className="mt-5 rounded-2xl border border-orange-200 bg-orange-50 p-4"><p className="flex items-center gap-2 font-bold text-[#7c3d0a]"><SearchCheck size={19}/> Great idea! Check these small corrections before finishing.</p><div className="mt-4 grid gap-3">{analysis.issues.map((issue, index) => <div key={`${issue.category}-${issue.original}-${index}`} className="rounded-xl bg-white p-3 shadow-sm"><p className="text-xs font-black uppercase tracking-wide text-[#a94505]">{labels[issue.category]}</p><p className="mt-1 text-sm font-semibold text-[#62708a]">Original: <span className="text-[#31445f]">“{issue.original}”</span></p><p className="mt-1 text-sm font-bold text-emerald-700">Suggestion: “{issue.suggestion}”</p><p className="mt-1 text-sm font-medium text-[#66310e]">{issue.message}</p></div>)}</div></div>;
+}

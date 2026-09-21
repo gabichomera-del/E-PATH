@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-labelledby="title">
+  <title id="title">Friendly fox explorer with backpack</title>
+  <defs><linearGradient id="fur" x2=".8" y2="1"><stop stop-color="#ffb03b"/><stop offset=".55" stop-color="#fb8026"/><stop offset="1" stop-color="#db551e"/></linearGradient><linearGradient id="pack" x2="0" y2="1"><stop stop-color="#2b97d4"/><stop offset="1" stop-color="#114977"/></linearGradient></defs>
+  <path d="M91 350Q19 364 24 432Q29 483 123 467L166 424Z" fill="url(#fur)" stroke="#bc4e1b" stroke-width="7"/>
+  <path d="M27 435Q35 475 119 465L136 445Q83 446 54 412Z" fill="#fff9ef"/>
+  <rect x="258" y="280" width="91" height="136" rx="35" fill="url(#pack)" stroke="#0d3659" stroke-width="7"/>
+  <path d="M115 322Q114 280 197 273Q286 278 290 353L279 440H121Z" fill="url(#fur)" stroke="#b7461a" stroke-width="7"/>
+  <path d="M155 326Q197 345 241 326L228 432H171Z" fill="#fff5e9"/>
+  <path d="M129 414L113 487H174L183 437M261 414L275 487H215L211 437" fill="url(#fur)" stroke="#b7461a" stroke-width="7"/>
+  <ellipse cx="139" cy="489" rx="42" ry="20" fill="#4b2d24"/><ellipse cx="260" cy="489" rx="42" ry="20" fill="#4b2d24"/>
+  <path d="M102 333Q56 360 79 394Q94 409 126 393L154 358M283 331Q344 327 357 302Q369 280 349 267Q331 262 321 279L280 286" fill="url(#fur)" stroke="#b7461a" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="87" cy="392" rx="29" ry="19" fill="#4b2d24"/><ellipse cx="351" cy="271" rx="29" ry="19" fill="#4b2d24"/>
+  <path d="M72 175Q43 112 63 23Q122 52 157 115M328 175Q357 112 337 23Q278 52 243 115" fill="url(#fur)" stroke="#6e351e" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M72 102L74 47Q113 70 132 113M328 102L326 47Q287 70 268 113" fill="#fff1e7"/>
+  <path d="M35 206Q43 95 200 94Q357 95 365 206Q362 297 286 329H114Q38 297 35 206Z" fill="url(#fur)"/>
+  <path d="M40 224Q84 217 130 247Q167 270 200 257Q233 270 270 247Q316 217 360 224Q334 297 272 312Q235 331 200 319Q165 331 128 312Q66 297 40 224Z" fill="#fff8ef"/>
+  <ellipse cx="143" cy="205" rx="33" ry="43" fill="white"/><ellipse cx="257" cy="205" rx="33" ry="43" fill="white"/>
+  <ellipse cx="149" cy="211" rx="21" ry="29" fill="#55a72d"/><ellipse cx="251" cy="211" rx="21" ry="29" fill="#55a72d"/>
+  <ellipse cx="150" cy="213" rx="12" ry="22" fill="#122519"/><ellipse cx="250" cy="213" rx="12" ry="22" fill="#122519"/>
+  <circle cx="156" cy="198" r="7" fill="white"/><circle cx="256" cy="198" r="7" fill="white"/>
+  <path d="M115 149Q139 133 162 150M238 150Q261 133 285 149" fill="none" stroke="#4f2c22" stroke-width="9" stroke-linecap="round"/>
+  <path d="M176 252Q200 240 224 252Q220 271 200 273Q180 271 176 252Z" fill="#3c2b28"/>
+  <path d="M174 282Q200 310 226 282" fill="none" stroke="#733e34" stroke-width="7" stroke-linecap="round"/>
+  <path d="M143 309L151 385M256 309L249 385" stroke="#164c77" stroke-width="13" stroke-linecap="round"/>
+</svg>

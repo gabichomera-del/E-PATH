@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title">
+  <title id="title">E-P.A.T.H. fox logo</title>
+  <defs>
+    <radialGradient id="sky"><stop stop-color="#237fcb"/><stop offset="1" stop-color="#0a2656"/></radialGradient>
+    <linearGradient id="fur" x2=".8" y2="1"><stop stop-color="#ffaf36"/><stop offset=".55" stop-color="#fa7921"/><stop offset="1" stop-color="#d94d18"/></linearGradient>
+    <linearGradient id="plate" x2="0" y2="1"><stop stop-color="#155caa"/><stop offset="1" stop-color="#09224c"/></linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="800" height="800" rx="112" fill="url(#sky)"/>
+  <ellipse cx="400" cy="658" rx="318" ry="52" fill="#03142f" opacity=".45" filter="url(#shadow)"/>
+  <path d="M103 500Q103 468 140 466H660Q697 468 697 500V663Q697 698 659 704H141Q103 698 103 663Z" fill="url(#plate)" stroke="#36aeff" stroke-width="13"/>
+  <path d="M220 327Q174 220 215 102Q286 123 348 235M580 327Q626 220 585 102Q514 123 452 235" fill="url(#fur)" stroke="#70351d" stroke-width="13" stroke-linejoin="round"/>
+  <path d="M234 260Q216 188 228 144Q272 169 310 230M566 260Q584 188 572 144Q528 169 490 230" fill="#fff2e8"/>
+  <path d="M180 345Q190 206 400 200Q610 206 620 345Q619 459 526 505H274Q181 459 180 345Z" fill="url(#fur)"/>
+  <path d="M190 372Q250 355 310 404Q365 449 400 415Q435 449 490 404Q550 355 610 372Q578 467 486 485Q440 508 400 496Q360 508 314 485Q222 467 190 372Z" fill="#fff7ef"/>
+  <ellipse cx="323" cy="350" rx="46" ry="59" fill="white"/><ellipse cx="477" cy="350" rx="46" ry="59" fill="white"/>
+  <ellipse cx="330" cy="355" rx="27" ry="37" fill="#48a628"/><ellipse cx="470" cy="355" rx="27" ry="37" fill="#48a628"/>
+  <ellipse cx="331" cy="357" rx="15" ry="29" fill="#142617"/><ellipse cx="469" cy="357" rx="15" ry="29" fill="#142617"/>
+  <circle cx="340" cy="340" r="9" fill="white"/><circle cx="478" cy="340" r="9" fill="white"/>
+  <path d="M292 283Q321 260 350 280M450 280Q479 260 508 283" fill="none" stroke="#46271f" stroke-width="13" stroke-linecap="round"/>
+  <path d="M373 406Q400 390 427 406Q423 426 400 432Q377 426 373 406Z" fill="#352726"/>
+  <path d="M365 443Q400 474 435 443" fill="none" stroke="#713e36" stroke-width="9" stroke-linecap="round"/>
+  <text x="400" y="624" text-anchor="middle" font-family="Trebuchet MS, Verdana, sans-serif" font-weight="1000" font-size="112" letter-spacing="-7" paint-order="stroke" stroke="#092047" stroke-width="10"><tspan fill="#fff9f2">E·</tspan><tspan fill="#238ce5">P·</tspan><tspan fill="#ff9228">A·</tspan><tspan fill="#74c923">T·</tspan><tspan fill="#fff9f2">H</tspan></text>
+</svg>

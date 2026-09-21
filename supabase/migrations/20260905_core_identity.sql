@@ -1,0 +1,8 @@
+-- Dependency foundation required by later curriculum migrations.
+create extension if not exists pgcrypto;
+do $$ begin create type public.app_role as enum ('student', 'teacher', 'admin'); exception when duplicate_object then null; end $$;
+create table if not exists public.users (id uuid primary key references auth.users(id) on delete cascade, first_name text not null, last_name text not null, email text not null unique, role public.app_role not null, created_at timestamptz not null default now());
+create table if not exists public.students (id uuid primary key default gen_random_uuid(), user_id uuid not null unique references public.users(id) on delete cascade, grade text not null, section text not null, student_code text not null unique, created_at timestamptz not null default now());
+create table if not exists public.teachers (id uuid primary key default gen_random_uuid(), user_id uuid not null unique references public.users(id) on delete cascade, created_at timestamptz not null default now());
+create table if not exists public.classes (id uuid primary key default gen_random_uuid(), teacher_id uuid not null references public.teachers(id) on delete cascade, name text not null, grade text not null, section text not null, academic_year integer not null, class_code text not null unique, created_at timestamptz not null default now());
+create table if not exists public.class_members (id uuid primary key default gen_random_uuid(), class_id uuid not null references public.classes(id) on delete cascade, student_id uuid not null references public.students(id) on delete cascade, joined_at timestamptz not null default now(), unique(class_id, student_id));

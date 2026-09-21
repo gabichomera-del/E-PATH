@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="title">
+  <title id="title">Blue learning adventure landscape</title>
+  <defs><linearGradient id="sky" x2=".9" y2="1"><stop stop-color="#071b40"/><stop offset=".6" stop-color="#0f3f78"/><stop offset="1" stop-color="#072148"/></linearGradient><radialGradient id="glow"><stop stop-color="#287fbb" stop-opacity=".8"/><stop offset="1" stop-color="#287fbb" stop-opacity="0"/></radialGradient><linearGradient id="path" x2="1" y2=".5"><stop stop-color="#ffbe61"/><stop offset="1" stop-color="#ff7b24"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#sky)"/><ellipse cx="1210" cy="350" rx="590" ry="420" fill="url(#glow)"/>
+  <path d="M0 540Q310 400 620 520T1200 455T1600 435V900H0Z" fill="#0a315f"/><path d="M0 660Q400 510 700 620T1300 530T1600 560V900H0Z" fill="#0a2b55"/>
+  <path d="M1480 0Q1320 225 1430 400Q1490 550 1290 610Q1080 665 1130 900H850Q825 690 1085 595Q1290 535 1255 380Q1210 180 1310 0Z" fill="#234e74" opacity=".8"/>
+  <path d="M1450 0Q1300 220 1395 395Q1450 510 1265 565Q1020 640 1085 900" fill="none" stroke="url(#path)" stroke-width="25" stroke-linecap="round" opacity=".9"/>
+  <path d="M1485 0Q1350 210 1435 390Q1485 540 1300 605Q1110 675 1160 900" fill="none" stroke="#ffe0a1" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <path d="M1170 410L1240 255L1310 410Z" fill="#1f72a7" stroke="#6dc2e7" stroke-width="7"/><rect x="1200" y="390" width="82" height="100" rx="8" fill="#1e638d"/><path d="M1190 270L1240 205L1290 270Z" fill="#2984ad"/><rect x="1231" y="162" width="18" height="55" fill="#64d0ec"/><circle cx="1240" cy="150" r="20" fill="#9eeaff"/>
+  <g fill="#c8edff" opacity=".8"><circle cx="975" cy="130" r="4"/><circle cx="1090" cy="240" r="3"/><circle cx="1450" cy="170" r="5"/><circle cx="1530" cy="350" r="3"/><circle cx="925" cy="420" r="3"/></g>
+  <g stroke="#98e9d1" stroke-width="5" opacity=".7"><path d="M1050 105v30m-15-15h30"/><path d="M1510 250v24m-12-12h24"/></g>
+  <path d="M0 0H770V900H0Z" fill="#061939" opacity=".46"/>
+</svg>

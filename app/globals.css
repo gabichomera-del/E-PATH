@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #071b3d;
+  --blue: #125cdb;
+  --blue-light: #eaf2ff;
+  --orange: #ff7a1a;
+  --green: #21a46b;
+  --ink: #10233f;
+  --muted: #62708a;
+  --line: #dce5f2;
+  --font-friendly: "Fredoka", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  --font-adventure: "Fredoka", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--ink); background: #f7faff; font-family: var(--font-friendly); }
+button, input, select { font: inherit; }
+.focus-ring:focus-visible { outline: 3px solid #8eb8ff; outline-offset: 3px; }
+
+@layer components {
+  .container-shell { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+  .font-adventure { font-family: var(--font-adventure); }
+  .btn-primary { @apply focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#ff9a42] to-[#f2680b] px-6 font-extrabold text-white shadow-[0_9px_0_#a94000,0_18px_34px_rgba(255,105,16,.2)] transition duration-200 hover:brightness-110 active:translate-y-1 active:shadow-[0_4px_0_#a94000]; }
+  .btn-teacher { @apply focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#7aebbd]/30 bg-gradient-to-br from-[#2fc885] to-[#15835a] px-6 font-extrabold text-white shadow-[0_9px_0_#0b5538,0_18px_34px_rgba(29,174,113,.18)] transition duration-200 hover:brightness-110 active:translate-y-1 active:shadow-[0_4px_0_#0b5538]; }
+  .btn-secondary { @apply focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-6 font-extrabold text-white backdrop-blur transition hover:bg-white/20; }
+  .card { @apply rounded-3xl border border-[#dce5f2] bg-white shadow-[0_16px_50px_rgba(18,55,100,0.08)]; }
+  .field { @apply focus-ring min-h-12 w-full rounded-xl border border-[#cad7e8] bg-white px-4 text-base text-[#10233f] placeholder:text-[#8b99ae] focus:border-[#125cdb]; }
+  .label { @apply mb-2 block text-sm font-extrabold text-[#31445f]; }
+}

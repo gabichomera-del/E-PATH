@@ -1,0 +1,9 @@
+"use client";
+import { useState } from "react";
+import { RotateCcw } from "lucide-react";
+import type { ActivityProps } from "@/components/activities/multiple-choice-activity";
+import { Submit } from "@/components/activities/multiple-choice-activity";
+import { ActivityShell } from "@/components/activities/activity-shell";
+import { AudioPrompt } from "@/components/activities/audio-prompt";
+import { shuffleOptions } from "@/lib/learning/shuffle";
+export function UnscrambleActivity({activity,onAnswer}:ActivityProps){const item=activity.items[0];const words=shuffleOptions(item.options??[],`${activity.id}:${item.id}`);const [picked,setPicked]=useState<number[]>([]);const sentence=picked.map(i=>words[i]).join(" ");return <ActivityShell eyebrow={activity.audioScript?"Listening sequence":"Build the sentence"} instructions={activity.instructions}>{activity.audioScript&&<AudioPrompt script={activity.audioScript}/>}<p className="text-lg font-semibold">{item.prompt}</p><div className="mt-5 min-h-20 rounded-2xl border-2 border-dashed border-blue-200 bg-blue-50/70 p-4 text-lg font-semibold text-[#15365d]">{sentence||"Choose the events below…"}</div><div className="mt-4 flex flex-wrap gap-3">{words.map((word,index)=><button key={`${word}-${index}`} disabled={picked.includes(index)} onClick={()=>setPicked(current=>[...current,index])} className="focus-ring rounded-xl border-2 border-[#dce5f2] bg-white px-4 py-2 font-semibold shadow-sm transition hover:border-[#125cdb] disabled:opacity-30">{word}</button>)}</div><button onClick={()=>setPicked([])} className="focus-ring mt-4 inline-flex items-center gap-2 rounded-lg text-sm font-bold text-[#62708a]"><RotateCcw size={15}/> Start over</button><br/><Submit disabled={picked.length!==words.length} onClick={()=>onAnswer({correct:sentence===item.answer,score:sentence===item.answer?100:0,response:sentence})}/></ActivityShell>}
