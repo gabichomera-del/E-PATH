@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" role="img" aria-labelledby="title desc">
+  <title id="title">E.P.A.T.H.</title>
+  <desc id="desc">A smiling fox explorer with goggles inside a compass, beside colorful rounded E.P.A.T.H. lettering and a winding path.</desc>
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#143766"/><stop offset="1" stop-color="#071b3d"/></linearGradient>
+    <linearGradient id="compass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#76d4ff"/><stop offset=".55" stop-color="#339dff"/><stop offset="1" stop-color="#6ce7bd"/></linearGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2=".85" y2="1"><stop stop-color="#ffbd61"/><stop offset=".48" stop-color="#ff8530"/><stop offset="1" stop-color="#d65220"/></linearGradient>
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ff9b3b"/><stop offset=".48" stop-color="#72e6bd"/><stop offset="1" stop-color="#5dbfff"/></linearGradient>
+    <filter id="depth" x="-25%" y="-35%" width="150%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#03122c" flood-opacity=".48"/></filter>
+    <filter id="letterDepth" x="-10%" y="-25%" width="130%" height="160%"><feDropShadow dx="0" dy="5" stdDeviation="2" flood-color="#031027" flood-opacity=".7"/></filter>
+  </defs>
+
+  <!-- The wordmark is one compact adventure emblem, readable on light or dark UI. -->
+  <path d="M235 57Q235 42 251 42H896Q921 42 921 66V183Q921 202 901 202H259Q238 202 238 183Z" fill="url(#plate)" stroke="#4c9cd4" stroke-width="3" filter="url(#depth)"/>
+  <path d="M243 183Q391 169 535 184T917 184" fill="none" stroke="#68d1f2" stroke-opacity=".32" stroke-width="3"/>
+
+  <!-- Explorer compass, landscape, and fox form a single illustrated mark. -->
+  <g filter="url(#depth)">
+    <circle cx="121" cy="120" r="91" fill="#0b284f" stroke="url(#compass)" stroke-width="11"/>
+    <path d="M47 171Q121 226 196 171" fill="none" stroke="#70e7c4" stroke-width="10" stroke-linecap="round"/>
+    <path d="M54 149L87 119L108 141L142 107L185 151" fill="none" stroke="#71c6ec" stroke-opacity=".72" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M121 12L126 26L141 26L129 35L133 49L121 40L109 49L113 35L101 26L116 26Z" fill="#ffc15d"/>
+    <path d="M20 120L37 115L37 125Z M222 120L205 115L205 125Z" fill="#9de3ff"/>
+    <path d="M65 159Q44 168 36 188Q55 184 73 191Q85 192 98 177" fill="url(#fur)" stroke="#b44821" stroke-width="3"/>
+    <path d="M68 155Q77 176 118 178Q164 177 177 153L170 126L73 124Z" fill="#f0f7f5" stroke="#b8d8dc" stroke-width="3"/>
+    <path d="M80 153Q72 128 79 102L65 67Q63 56 72 60L100 81Q122 73 142 81L174 60Q182 55 178 68L167 102Q177 130 166 151Q150 170 121 171Q94 171 80 153Z" fill="url(#fur)" stroke="#aa421d" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M78 100L72 69L99 89Z M165 99L173 69L145 89Z" fill="#ffd9bb"/>
+    <path d="M86 131Q84 143 68 146Q84 166 103 160L120 150L139 160Q159 166 174 146Q158 143 155 130Q141 143 121 140Q102 143 86 131Z" fill="#fff6e9"/>
+    <ellipse cx="101" cy="121" rx="9" ry="12" fill="#19233c"/><ellipse cx="143" cy="121" rx="9" ry="12" fill="#19233c"/>
+    <circle cx="104" cy="117" r="3" fill="#fff"/><circle cx="146" cy="117" r="3" fill="#fff"/>
+    <path d="M114 143Q121 149 128 143L124 137H118Z" fill="#2a2731"/>
+    <path d="M109 151Q121 162 134 151" fill="none" stroke="#75382e" stroke-width="3" stroke-linecap="round"/>
+    <path d="M77 99Q112 79 162 97" fill="none" stroke="#163759" stroke-width="11" stroke-linecap="round"/>
+    <g transform="rotate(-8 121 95)"><rect x="81" y="79" width="39" height="27" rx="13" fill="#133251" stroke="#b8e7ed" stroke-width="4"/><rect x="125" y="79" width="39" height="27" rx="13" fill="#133251" stroke="#b8e7ed" stroke-width="4"/><path d="M120 91Q123 88 125 91" fill="none" stroke="#b8e7ed" stroke-width="4"/><ellipse cx="100" cy="92" rx="13" ry="8" fill="#5bc9f2" opacity=".7"/><ellipse cx="144" cy="92" rx="13" ry="8" fill="#5bc9f2" opacity=".7"/></g>
+  </g>
+
+  <!-- Rounded strokes make the lettering independent of installed fonts. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="21" filter="url(#letterDepth)">
+    <path d="M312 88H269V157H312M269 122H302" stroke="#f6fcff"/>
+    <path d="M387 157V88H421Q450 88 450 111Q450 136 421 136H387" stroke="#47b8ff"/>
+    <path d="M504 157L537 88L570 157M517 132H557" stroke="#ff9d3d"/>
+    <path d="M622 88H687M654 88V157" stroke="#6de1bc"/>
+    <path d="M741 88V157M741 123H793M793 88V157" stroke="#f6fcff"/>
+  </g>
+  <g filter="url(#letterDepth)"><circle cx="347" cy="158" r="11" fill="#ffae4d"/><circle cx="474" cy="158" r="11" fill="#62cbff"/><circle cx="595" cy="158" r="11" fill="#ffd15a"/><circle cx="715" cy="158" r="11" fill="#79e6c0"/><circle cx="833" cy="158" r="11" fill="#ffae4d"/></g>
+  <path d="M266 185Q370 193 453 184T627 185T807 184Q845 181 884 185" fill="none" stroke="url(#trail)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M877 186L863 177M877 186L863 195" fill="none" stroke="#64ccf4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M893 73L897 62L901 73L913 77L901 81L897 92L893 81L881 77Z" fill="#ffbd59"/>
+</svg>

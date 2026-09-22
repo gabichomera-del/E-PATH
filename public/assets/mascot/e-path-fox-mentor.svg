@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 540" role="img" aria-labelledby="title desc">
+  <title id="title">E-P.A.T.H. explorer fox</title><desc id="desc">Confident fox guide wearing explorer goggles, navy hoodie, backpack and compass.</desc>
+  <defs>
+    <linearGradient id="fur" x1=".15" y1="0" x2=".9" y2="1"><stop stop-color="#ffc263"/><stop offset=".28" stop-color="#ff962d"/><stop offset=".7" stop-color="#f2701e"/><stop offset="1" stop-color="#be461b"/></linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#305b91"/><stop offset=".5" stop-color="#173c70"/><stop offset="1" stop-color="#091b42"/></linearGradient>
+    <linearGradient id="pack" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2a91cf"/><stop offset="1" stop-color="#123c70"/></linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9feaff"/><stop offset=".35" stop-color="#2179ba"/><stop offset="1" stop-color="#122e69"/></linearGradient>
+    <radialGradient id="cheek"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#e8d4c4"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#07182e" flood-opacity=".35"/></filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <!-- White-tipped tail and practical backpack sit behind the body. -->
+    <path d="M112 355C27 346 0 406 29 467c23 48 112 47 158-5l-31-59Z" fill="url(#fur)" stroke="#b84d21" stroke-width="5"/>
+    <path d="M32 426c20 16 44 23 78 15 17-4 34-13 45-25l27 46C137 514 48 515 28 467c-6-15-4-29 4-41Z" fill="#fff8ec"/>
+    <rect x="282" y="269" width="92" height="152" rx="28" fill="url(#pack)" stroke="#0c3059" stroke-width="7"/>
+    <path d="M295 311h61m-61 62h61" stroke="#70bcde" stroke-width="5" opacity=".65"/>
+    <rect x="322" y="326" width="41" height="41" rx="11" fill="#0b315b" stroke="#83d5f6" stroke-width="3"/>
+    <!-- Boots and legs. -->
+    <path d="M143 417l-19 70 61 2 16-68m55-1 15 69 57-2-24-75" fill="url(#fur)" stroke="#a8421d" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M110 481c-14 12-12 31 8 37h65c16-3 18-21 5-34m79 0c-11 13-8 30 8 34h61c22-5 21-24 5-37" fill="#332b30" stroke="#1a2237" stroke-width="5"/>
+    <!-- Hood, torso, hoodie pocket and straps. -->
+    <path d="M141 297c-30-6-48 13-51 49-5 57 17 96 45 111h153c33-19 48-55 46-111-2-35-29-57-57-51l-67 35Z" fill="url(#hoodie)" stroke="#0a2147" stroke-width="8"/>
+    <path d="M139 305c12 39 41 47 76 47s64-10 76-47" fill="none" stroke="#5b8ab7" stroke-width="11" stroke-linecap="round"/>
+    <path d="M172 391h94l-8 40h-78Z" fill="#15345d" stroke="#4777a7" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M169 352l-8 44m102-44 9 44" stroke="#d1e0dc" stroke-width="5" stroke-linecap="round"/>
+    <path d="M139 337l22 77m125-76-19 77" stroke="#2675ab" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="159" cy="379" r="18" fill="#0b2b55" stroke="#ffc468" stroke-width="4"/><path d="m159 366 4 9 10 4-10 4-4 9-4-9-10-4 10-4Z" fill="#e8f7ff"/><circle cx="159" cy="379" r="3" fill="#ff962e"/>
+    <!-- One hand grips the bag while the other welcomes the student. -->
+    <path d="M108 341c-18 6-37 31-36 51 2 19 22 22 38 12l38-26m182-40c21-4 39-13 50-28 10-13 30-7 27 5-2 17-17 31-28 40-11 12-28 23-47 25l-25-10" fill="url(#fur)" stroke="#b74b21" stroke-width="7" stroke-linecap="round"/>
+    <ellipse cx="88" cy="403" rx="27" ry="19" fill="#3b2b29"/><ellipse cx="382" cy="330" rx="26" ry="20" fill="#3b2b29"/>
+    <!-- Ears, face and muzzle. -->
+    <path d="M92 181C64 119 63 52 76 20c40 21 75 58 99 108m173 52c28-61 29-128 16-160-40 21-75 58-99 108" fill="url(#fur)" stroke="#6f3928" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M91 111 83 47c25 20 46 44 61 78m203-14 8-64c-25 20-46 44-61 78" fill="#fff0e4"/>
+    <path d="M48 203c1-76 60-127 171-130 110 3 170 54 171 130 1 85-58 132-171 151C106 335 47 288 48 203Z" fill="url(#fur)" stroke="#b44e22" stroke-width="4"/>
+    <path d="M53 236c44-18 75-8 113 13 32 18 73 19 106 0 38-21 69-31 113-13-12 48-51 77-102 89-36 18-94 18-128 0-51-12-90-41-102-89Z" fill="url(#cheek)"/>
+    <!-- Explorer goggles rest above the brows. -->
+    <path d="M98 130c44-29 92-37 120-36 30-1 78 7 123 36" fill="none" stroke="#112b4d" stroke-width="17" stroke-linecap="round"/>
+    <g transform="rotate(-9 159 124)"><rect x="107" y="94" width="99" height="63" rx="27" fill="#23364f" stroke="#9bb4c7" stroke-width="7"/><rect x="117" y="102" width="79" height="47" rx="20" fill="url(#lens)"/><path d="M130 108h37" stroke="#d4faff" stroke-width="5" opacity=".65"/></g>
+    <g transform="rotate(9 277 124)"><rect x="231" y="94" width="99" height="63" rx="27" fill="#23364f" stroke="#9bb4c7" stroke-width="7"/><rect x="241" y="102" width="79" height="47" rx="20" fill="url(#lens)"/><path d="M254 108h37" stroke="#d4faff" stroke-width="5" opacity=".65"/></g>
+    <path d="M205 123h27" stroke="#a9b9c8" stroke-width="8"/>
+    <!-- Warm alert eyes, eyebrow, smile. -->
+    <path d="M126 174q23-16 50-3m84 0q26-13 50 3" fill="none" stroke="#633528" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="153" cy="220" rx="31" ry="38" fill="#fffdf8"/><ellipse cx="283" cy="220" rx="31" ry="38" fill="#fffdf8"/>
+    <ellipse cx="160" cy="225" rx="19" ry="26" fill="#55a872"/><ellipse cx="276" cy="225" rx="19" ry="26" fill="#55a872"/>
+    <ellipse cx="163" cy="227" rx="10" ry="18" fill="#172c29"/><ellipse cx="273" cy="227" rx="10" ry="18" fill="#172c29"/>
+    <circle cx="169" cy="213" r="6" fill="white"/><circle cx="279" cy="213" r="6" fill="white"/>
+    <path d="M194 265q24-12 48 0-5 22-24 23-19-1-24-23Z" fill="#392d2b"/>
+    <path d="M184 298q34 27 68 0" fill="none" stroke="#884b43" stroke-width="6" stroke-linecap="round"/>
+  </g>
+</svg>

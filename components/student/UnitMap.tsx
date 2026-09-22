@@ -60,4 +60,4 @@ function HeroAcademyZones(){return <div className="pointer-events-none absolute 
   </div>
 </div>}
 
-function HeroFoxGuide({mission}:{mission:Unit["missions"][number]}){return <div className="pointer-events-none absolute z-20 h-10 w-10 -translate-x-1/2 -translate-y-[calc(100%+0.75rem)]" style={{left:`${mission.mapPosition.x}%`,top:`${mission.mapPosition.y}%`}} aria-hidden="true"><motion.div animate={{y:[0,-3,0]}} transition={{duration:2.8,repeat:Infinity,ease:"easeInOut"}} className="h-full w-full"><FoxMascot heroMentor compact/></motion.div></div>}
+function HeroFoxGuide({mission}:{mission:Unit["missions"][number]}){return <div className="pointer-events-none absolute z-20 h-16 w-16 -translate-x-1/2 -translate-y-[calc(100%+0.75rem)] sm:h-[4.5rem] sm:w-[4.5rem]" style={{left:`${mission.mapPosition.x}%`,top:`${mission.mapPosition.y}%`}} aria-hidden="true"><FoxMascot heroMentor mapGuide/></div>}

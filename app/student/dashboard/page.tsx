@@ -7,6 +7,7 @@ import { getUnit } from "@/lib/learning/repository";
 import { createClient } from "@/lib/supabase/server";
 import { getStudentEnrollment } from "@/lib/database/classes";
 import { UnitDashboardStatus } from "@/components/student/unit-dashboard-status";
+import { FoxMascot } from "@/components/student/FoxMascot";
 
 export const dynamic = "force-dynamic";
 
@@ -42,6 +43,7 @@ export default async function StudentDashboard() {
           <Image src="/assets/worlds/unit-6-superpowers.png" alt="Superpower Academy floating-island world" fill priority sizes="(max-width: 1200px) 100vw, 1152px" className="object-cover object-center transition duration-700 group-hover:scale-[1.025]"/>
           <div className="absolute inset-0 bg-gradient-to-r from-[#04132f]/95 via-[#061a3c]/72 to-[#061a3c]/15"/>
           <div className="absolute inset-0 bg-gradient-to-t from-[#04112c] via-transparent to-transparent"/>
+          <div className="pointer-events-none absolute bottom-2 right-[8%] hidden md:block" aria-hidden="true"><span className="absolute inset-0 rounded-full bg-cyan-300/20 blur-3xl"/><FoxMascot heroMentor hero mood="progress"/></div>
           <div className="relative flex min-h-[430px] max-w-2xl flex-col justify-between p-7 sm:p-10">
             <div className="flex flex-wrap gap-3"><span className="rounded-full border border-white/25 bg-white/12 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] backdrop-blur-md">Unit 6</span><UnitDashboardStatus variant="badge" completed={completedMissions}/></div>
             <div>
