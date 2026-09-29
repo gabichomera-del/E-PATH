@@ -14,16 +14,35 @@ export async function getUnit(id: string): Promise<Unit | undefined> {
   if (error || !data) return getSampleUnit(id);
   const ordered = [...(data.missions as DbMission[])].sort((a, b) => a.sort_order - b.sort_order);
   const { data: auth } = await supabase.auth.getUser();
-  const missionIds = ordered.map((mission) => mission.id);
   const { data: student } = auth.user ? await supabase.from("students").select("id").eq("user_id", auth.user.id).maybeSingle() : { data: null };
-  const progress = student && missionIds.length
-    ? await supabase.from("student_mission_progress").select("mission_id, status").eq("student_id", student.id).in("mission_id", missionIds)
-    : { data: [] };
-  const savedStatuses = new Map((progress.data ?? []).map((entry) => [entry.mission_id, entry.status as MissionStatus]));
+  const activityIdsByMission = new Map(ordered.map((mission) => [mission.id, (mission.activities ?? []).map((activity) => activity.id)]));
+  const activityIds = [...activityIdsByMission.values()].flat();
+  const activityProgress = student && activityIds.length
+    ? await supabase.from("student_activity_progress").select("activity_id, status").eq("student_id", student.id).in("activity_id", activityIds)
+    : { data: [], error: null };
+  if (activityProgress.error) {
+    console.error("Unable to load activity progress for the unit map", {
+      code: activityProgress.error.code,
+      message: activityProgress.error.message,
+    });
+  }
+  const completedActivityIds = new Set(
+    (activityProgress.data ?? [])
+      .filter((entry) => entry.status === "completed")
+      .map((entry) => entry.activity_id as string),
+  );
+  const completedMissions = new Set(
+    ordered
+      .filter((mission) => {
+        const missionActivityIds = activityIdsByMission.get(mission.id) ?? [];
+        return missionActivityIds.length > 0 && missionActivityIds.every((activityId) => completedActivityIds.has(activityId));
+      })
+      .map((mission) => mission.id),
+  );
   const missions = ordered.map((mission, index) => {
-    const saved = savedStatuses.get(mission.id);
-    const priorCompleted = index === 0 || savedStatuses.get(ordered[index - 1].id) === "completed";
-    return mapMission(mission, saved === "completed" ? "completed" : priorCompleted ? "available" : "locked");
+    const activityComplete = completedMissions.has(mission.id);
+    const priorCompleted = index === 0 || completedMissions.has(ordered[index - 1].id);
+    return mapMission(mission, activityComplete ? "completed" : priorCompleted ? "available" : "locked");
   });
   return { id: data.content_key ?? id, databaseId: data.id, gradeId: data.grade_id, number: data.sort_order, title: data.title, description: data.description, order: data.sort_order, missions };
 }
