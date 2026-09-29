@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCurrentUser } from "@/lib/auth/current-user";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { createAdminClient, getAdminEnvironmentStatus } from "@/lib/supabase/admin";
 
 function temporaryPassword() {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$";
@@ -22,6 +22,7 @@ export async function POST(_: Request, { params }: { params: Promise<{ studentId
   if (!teacher) return NextResponse.json({ error: "Teacher profile not found." }, { status: 404 });
   const { data: membership } = await supabase.from("class_members").select("id, classes!inner(teacher_id)").eq("student_id", studentId).eq("classes.teacher_id", teacher.id).limit(1).maybeSingle();
   if (!membership) return NextResponse.json({ error: "This student is not enrolled in one of your classes." }, { status: 403 });
+  console.info("Teacher password reset admin environment check.", getAdminEnvironmentStatus());
   const admin = createAdminClient();
   if (!admin) return NextResponse.json({ error: "Password administration is not configured." }, { status: 503 });
   const { data: student } = await admin.from("students").select("user_id").eq("id", studentId).single();
